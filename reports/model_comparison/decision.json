@@ -1,0 +1,11 @@
+{
+  "best_model": "7-Day Same-Hour Mean",
+  "best_wape": 33.89243831697716,
+  "best_naive": "7-Day Same-Hour Mean",
+  "v2_vs_v1_improvement_percent": 18.0318641056288,
+  "v2_vs_best_naive": "WORSE",
+  "decision": "모델 개선 효과는 있었으나 단순 seasonal baseline을 아직 이기지 못함",
+  "gate_8_gap_percentage_points": 25.892438316977163,
+  "drift_10_gap_percentage_points": 23.892438316977163,
+  "aiops_ready": "NOT YET"
+}
