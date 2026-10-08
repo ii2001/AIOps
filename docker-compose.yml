@@ -1,0 +1,19 @@
+name: renewable-energy-aiops
+services:
+  dashboard:
+    image: renewable-energy-aiops:latest
+    container_name: renewable-energy-aiops
+    build: .
+    ports:
+      - "8099:8088"
+    volumes:
+      - renewable_energy_state:/app/artifacts/docker/operations
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8088/health', timeout=5)"]
+      interval: 20s
+      timeout: 8s
+      start_period: 90s
+      retries: 3
+volumes:
+  renewable_energy_state:

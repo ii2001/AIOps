@@ -1,0 +1,14 @@
+.venv
+venv
+.git
+**/__pycache__
+**/*.pyc
+**/.DS_Store
+**/matplotlib-cache
+.env
+.env.*
+review_bundle
+*.zip
+artifacts/docker/*
+!artifacts/docker/seed/
+!artifacts/docker/seed/**
