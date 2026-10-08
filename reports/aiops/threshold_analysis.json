@@ -1,0 +1,40 @@
+{
+  "old_policy": {
+    "gate": 8.0,
+    "drift": 10.0
+  },
+  "normal_validation": {
+    "mean": 52.84145610746317,
+    "median": 51.82453230224851,
+    "std": 16.23238131309136,
+    "min": 32.10040327496518,
+    "max": 87.61559228251458,
+    "p75": 66.89552706711119,
+    "p90": 74.78096454845254,
+    "p95": 83.69614040080546
+  },
+  "normal_test": {
+    "mean": 47.570426067885805,
+    "median": 41.81292795995846,
+    "std": 12.62912895973946,
+    "min": 34.075207910659195,
+    "max": 80.64383646479888,
+    "p75": 58.294721599063195,
+    "p90": 63.72132816912186,
+    "p95": 70.85204105583725
+  },
+  "recommended": {
+    "warning": 74.78096454845254,
+    "drift": 83.69614040080546,
+    "gate": 83.69614040080546,
+    "source": "Validation daily-origin rolling7-day P90/P95; gate=P95, plus improvement on independent gate"
+  },
+  "false_alarms": {
+    "evaluation_days": 41,
+    "warning_days": 2,
+    "drift_exceed_days": 0,
+    "drift_events": 0
+  },
+  "old_policy_test_days_at_or_above_10": 41,
+  "old_gate_test_days_above_8": 41
+}

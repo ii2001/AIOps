@@ -1,0 +1,12 @@
+{
+  "scenario": "capacity_increase",
+  "change": "+15%",
+  "start_date": "2025-12-08",
+  "detected": false,
+  "wape_before": 51.12859227804469,
+  "wape_after": 49.81965934629764,
+  "auto_retrain": false,
+  "result": "FAIL_NOT_DETECTED",
+  "threshold_exceed_date": null,
+  "detection_date": null
+}

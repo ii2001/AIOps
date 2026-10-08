@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "actual_preview_http": 200,
+  "prediction_count": 24,
+  "preview_repeatable_without_state_mutation": true,
+  "length_167_422": true,
+  "frozen_experiment_replay": true,
+  "failure_is_visible": true,
+  "log_severity_filter": true,
+  "mobile_all_tabs_no_overflow": true,
+  "keyboard_tabs": true,
+  "javascript_errors": [],
+  "real_actual_registration_idempotent_http_200": true
+}

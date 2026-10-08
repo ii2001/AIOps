@@ -1,0 +1,10 @@
+{
+  "mean_signed_error": 55.861174849282214,
+  "median_signed_error": 40.564601467010036,
+  "overprediction_ratio": 0.6041666666666666,
+  "underprediction_ratio": 0.3402777777777778,
+  "equal_ratio": 0.05555555555555555,
+  "mae": 171.50608136614545,
+  "units": "MWh / ratios0..1",
+  "direction": "actual decrease, opposite mean positive prediction bias"
+}

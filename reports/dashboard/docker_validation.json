@@ -1,0 +1,156 @@
+{
+  "status": "PASS",
+  "health": {
+    "status": "ok",
+    "model_loaded": false
+  },
+  "model_info": {
+    "model_name": "RenewableEnergyPredictor",
+    "production_version": "1",
+    "stage": "Production",
+    "model_version": "1",
+    "feature_configuration": [
+      "normalized_mwh",
+      "hour_sin",
+      "hour_cos",
+      "day_of_week_sin",
+      "day_of_week_cos",
+      "day_of_year_sin",
+      "day_of_year_cos"
+    ],
+    "input_hours": 168,
+    "output_hours": 24,
+    "metrics": {
+      "mae": 157.36653039076117,
+      "rmse": 247.0586689987361,
+      "wape": 42.8601091092369
+    },
+    "params": {
+      "model_type": "LSTM-v2",
+      "input_len": "168",
+      "output_len": "24",
+      "feature_count": "7",
+      "epochs": "18",
+      "learning_rate": "0.001",
+      "retraining_window": "original v2 Train/Validation, before Test",
+      "threshold": "83.69614040080546",
+      "source_original_production_version": "1"
+    },
+    "cache_version_keys": "version-specific; cleared on promotion"
+  },
+  "preview_http_status": 200,
+  "predictions_count": 24,
+  "finite_nonnegative_MWh": true,
+  "length167_status": 422,
+  "forecast_state_unchanged": true,
+  "dashboard_HTTP200": true,
+  "Swagger_HTTP200": true,
+  "forecast_response": {
+    "predictions": [
+      {
+        "hour": 1,
+        "mwh": 72.20579402828253
+      },
+      {
+        "hour": 2,
+        "mwh": 0.0
+      },
+      {
+        "hour": 3,
+        "mwh": 0.0
+      },
+      {
+        "hour": 4,
+        "mwh": 35.11109103664487
+      },
+      {
+        "hour": 5,
+        "mwh": 0.0
+      },
+      {
+        "hour": 6,
+        "mwh": 31.811972712534427
+      },
+      {
+        "hour": 7,
+        "mwh": 206.78005454052345
+      },
+      {
+        "hour": 8,
+        "mwh": 238.46064116648364
+      },
+      {
+        "hour": 9,
+        "mwh": 420.76265126964114
+      },
+      {
+        "hour": 10,
+        "mwh": 628.6589189778061
+      },
+      {
+        "hour": 11,
+        "mwh": 883.8904235205404
+      },
+      {
+        "hour": 12,
+        "mwh": 951.8594699965556
+      },
+      {
+        "hour": 13,
+        "mwh": 1186.2409395112297
+      },
+      {
+        "hour": 14,
+        "mwh": 1195.284233638203
+      },
+      {
+        "hour": 15,
+        "mwh": 1250.1464756033324
+      },
+      {
+        "hour": 16,
+        "mwh": 957.014916799126
+      },
+      {
+        "hour": 17,
+        "mwh": 649.9308450175968
+      },
+      {
+        "hour": 18,
+        "mwh": 647.2493077448305
+      },
+      {
+        "hour": 19,
+        "mwh": 311.83146942189984
+      },
+      {
+        "hour": 20,
+        "mwh": 427.7015918443612
+      },
+      {
+        "hour": 21,
+        "mwh": 92.3854893317385
+      },
+      {
+        "hour": 22,
+        "mwh": 0.0
+      },
+      {
+        "hour": 23,
+        "mwh": 96.73561162062677
+      },
+      {
+        "hour": 24,
+        "mwh": 0.0
+      }
+    ],
+    "forecast_date": "2026-01-01",
+    "model_version": "1",
+    "region": "전라남도",
+    "fuel": "태양광",
+    "mode": "preview; not stored as an operational forecast"
+  },
+  "volume_survives_container_recreation": true,
+  "old_HAIC_images_removed": true,
+  "server_left_running": true
+}

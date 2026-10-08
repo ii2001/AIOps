@@ -1,0 +1,17 @@
+{
+  "scenario": "output_curtailment",
+  "change_percent": -15,
+  "start_date": "2025-12-08",
+  "minimum_mwh": 23.94099994,
+  "original_wape_after": 51.12859227804469,
+  "mean_wape_after": 58.0028279019206,
+  "mean_rolling_wape_after": 60.42564571494785,
+  "max_rolling_wape": 97.71522650290497,
+  "first_warning_date": "2025-12-17",
+  "first_exceed_date": "2025-12-25",
+  "two_consecutive_date": "2025-12-26",
+  "detected": false,
+  "detection_date": null,
+  "detection_delay": null,
+  "prediction_reference": "original MLflow Production LSTM-v2/version1, unchanged actual-only injection"
+}

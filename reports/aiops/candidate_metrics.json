@@ -1,0 +1,39 @@
+{
+  "reason": "automatic-live-actuals-drift",
+  "as_of": "2025-12-26",
+  "production": {
+    "mae": 182.4190724388016,
+    "rmse": 286.9352329078619,
+    "wape": 82.67195375441335
+  },
+  "candidate": {
+    "mae": 183.69692155471876,
+    "rmse": 297.610817104384,
+    "wape": 83.25107238276655
+  },
+  "gate": "FAIL",
+  "gate_threshold": 83.69614040080546,
+  "run_id": "b45409dc0a3344f7939d253c8ff9e755",
+  "production_before": "1",
+  "production_after": "1",
+  "warm_start_weights_verified": true,
+  "epochs_completed": 10,
+  "split": {
+    "known_start": "2025-11-01T00:00:00+09:00",
+    "fit_end": "2025-12-12T23:00:00+09:00",
+    "early_stopping_start": null,
+    "fine_tuning_end": "2025-12-12T23:00:00+09:00",
+    "gate_start": "2025-12-13T00:00:00+09:00",
+    "gate_end": "2025-12-26T23:00:00+09:00",
+    "fine_tuning_days": 42,
+    "gate_days": 14
+  },
+  "gate_independent_of_fit_and_early_stopping": true,
+  "metrics_convention": "identical rolling origins with targets only in last14days; same shifted known-input features for both models",
+  "retrain_data_contains_drift": {
+    "hours": 69,
+    "first": "2025-12-08T08:00:00+09:00",
+    "last": "2025-12-12T21:00:00+09:00",
+    "change_percent": -20
+  }
+}
