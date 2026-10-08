@@ -1,0 +1,27 @@
+{
+  "candidates": [
+    "mean7",
+    "median7",
+    "median3",
+    "quantile35",
+    "quantile65",
+    "trimmed_mean7",
+    "enhanced_tree"
+  ],
+  "selection": "Minimum WAPE on early Validation only; no Gate/Test candidate selection",
+  "tree_params": {
+    "loss": "absolute_error",
+    "max_iter": 200,
+    "max_leaf_nodes": 31,
+    "min_samples_leaf": 50,
+    "learning_rate": 0.05,
+    "l2_regularization": 1,
+    "early_stopping": false,
+    "random_state": 42
+  },
+  "gate": {
+    "absolute_wape_cap": 40,
+    "max_relative_to_best_production_or_naive": 0.95
+  },
+  "production_switched": false
+}

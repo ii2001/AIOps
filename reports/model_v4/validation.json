@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "validation_only_selection": true,
+  "same_test_targets": true,
+  "past_only_features": true,
+  "saved_model_prediction_parity": true,
+  "original_files_preserved": true,
+  "gate": "FAIL",
+  "production_switched": false
+}

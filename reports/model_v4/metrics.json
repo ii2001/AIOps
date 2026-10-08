@@ -1,0 +1,166 @@
+{
+  "selected": "enhanced_tree",
+  "selection": {
+    "mean7": {
+      "mae": 186.7763084690209,
+      "rmse": 319.8318689906826,
+      "wape": 49.73241180924497
+    },
+    "median7": {
+      "mae": 186.61365819982652,
+      "rmse": 323.190139506193,
+      "wape": 49.689103371281064
+    },
+    "median3": {
+      "mae": 196.15688883466976,
+      "rmse": 350.49041788616853,
+      "wape": 52.230153035518036
+    },
+    "quantile35": {
+      "mae": 184.77991388373368,
+      "rmse": 334.45058385715095,
+      "wape": 49.20083733674854
+    },
+    "quantile65": {
+      "mae": 218.43124148275487,
+      "rmse": 363.19225079983966,
+      "wape": 58.161083396863354
+    },
+    "trimmed_mean7": {
+      "mae": 188.21380987416387,
+      "rmse": 323.79633229337907,
+      "wape": 50.115171338239506
+    },
+    "enhanced_tree": {
+      "mae": 176.26924662930503,
+      "rmse": 303.4011843910313,
+      "wape": 46.93472547203684
+    }
+  },
+  "metrics": {
+    "gate": {
+      "v4": {
+        "mae": 130.49665686578606,
+        "rmse": 237.4831914069467,
+        "wape": 24.222452366333023
+      },
+      "mean7": {
+        "mae": 81.6324331530834,
+        "rmse": 161.31881700888547,
+        "wape": 15.152401380152526
+      },
+      "v2": {
+        "mae": 205.5295898843926,
+        "rmse": 319.01443748589554,
+        "wape": 38.14987157844899
+      },
+      "v3": {
+        "mae": 80.14807319573117,
+        "rmse": 160.2654472294551,
+        "wape": 14.876878319064184
+      }
+    },
+    "test": {
+      "v4": {
+        "mae": 124.91424534231712,
+        "rmse": 230.6493616329727,
+        "wape": 34.02145406253436
+      },
+      "mean7": {
+        "mae": 124.44054705582026,
+        "rmse": 228.43934153281722,
+        "wape": 33.89243831697716
+      },
+      "v2": {
+        "mae": 157.36653039076117,
+        "rmse": 247.0586689987361,
+        "wape": 42.8601091092369
+      },
+      "v3": {
+        "mae": 124.16921354369501,
+        "rmse": 230.5100490534441,
+        "wape": 33.81853833388798
+      }
+    }
+  },
+  "midnight_metrics": {
+    "gate": {
+      "samples": 13,
+      "v4": {
+        "mae": 135.61457300266056,
+        "rmse": 243.90754996320624,
+        "wape": 25.26120110569919
+      },
+      "mean7": {
+        "mae": 76.61831453154728,
+        "rmse": 152.12111410193836,
+        "wape": 14.271848584614569
+      }
+    },
+    "test": {
+      "samples": 47,
+      "v4": {
+        "mae": 128.91791963347723,
+        "rmse": 235.6734650554649,
+        "wape": 35.22262047039227
+      },
+      "mean7": {
+        "mae": 123.6189091498543,
+        "rmse": 227.5362995218652,
+        "wape": 33.77483853546868
+      }
+    }
+  },
+  "gate": "FAIL",
+  "gate_effective_cap": 14.394781311144898,
+  "plan": {
+    "candidates": [
+      "mean7",
+      "median7",
+      "median3",
+      "quantile35",
+      "quantile65",
+      "trimmed_mean7",
+      "enhanced_tree"
+    ],
+    "selection": "Minimum WAPE on early Validation only; no Gate/Test candidate selection",
+    "tree_params": {
+      "loss": "absolute_error",
+      "max_iter": 200,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 50,
+      "learning_rate": 0.05,
+      "l2_regularization": 1,
+      "early_stopping": false,
+      "random_state": 42
+    },
+    "gate": {
+      "absolute_wape_cap": 40,
+      "max_relative_to_best_production_or_naive": 0.95
+    },
+    "production_switched": false
+  },
+  "segments": {
+    "train": {
+      "start": "2025-01-08T00:00:00+09:00",
+      "end": "2025-09-13T11:00:00+09:00"
+    },
+    "selection": {
+      "start": "2025-09-20T12:00:00+09:00",
+      "end": "2025-10-24T05:00:00+09:00"
+    },
+    "gate": {
+      "start": "2025-10-24T06:00:00+09:00",
+      "end": "2025-11-07T05:00:00+09:00"
+    },
+    "test": {
+      "start": "2025-11-14T06:00:00+09:00",
+      "end": "2025-12-31T23:00:00+09:00"
+    }
+  },
+  "limitations": [
+    "Existing Test already examined in past experiments; independent future evaluation still required",
+    "No weather forecasts or capacity data",
+    "No serving/retraining integration or Production promotion"
+  ]
+}
