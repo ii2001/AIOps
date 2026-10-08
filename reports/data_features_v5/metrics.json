@@ -1,0 +1,138 @@
+{
+  "selected": "normalized",
+  "selection": {
+    "mean7": {
+      "mae": 186.7763084690209,
+      "rmse": 319.8318689906826,
+      "wape": 49.73241180924497
+    },
+    "normalized": {
+      "mae": 166.63095376490514,
+      "rmse": 290.4352418798674,
+      "wape": 44.36836385048275
+    },
+    "normalized_solar": {
+      "mae": 167.66949561661875,
+      "rmse": 281.978918546831,
+      "wape": 44.644893521049205
+    }
+  },
+  "metrics": {
+    "gate": {
+      "v5": {
+        "mae": 89.64307470392234,
+        "rmse": 176.50911186811192,
+        "wape": 16.63931597282695
+      },
+      "mean7": {
+        "mae": 81.6324331530834,
+        "rmse": 161.31881700888547,
+        "wape": 15.152401380152526
+      },
+      "v2": {
+        "mae": 205.5295898843926,
+        "rmse": 319.01443748589554,
+        "wape": 38.14987157844899
+      },
+      "v3": {
+        "mae": 80.14807319573117,
+        "rmse": 160.2654472294551,
+        "wape": 14.876878319064184
+      }
+    },
+    "test": {
+      "v5": {
+        "mae": 125.00890841534128,
+        "rmse": 230.00656690261854,
+        "wape": 34.04723635326897
+      },
+      "mean7": {
+        "mae": 124.44054705582026,
+        "rmse": 228.43934153281722,
+        "wape": 33.89243831697716
+      },
+      "v2": {
+        "mae": 157.36653039076117,
+        "rmse": 247.0586689987361,
+        "wape": 42.8601091092369
+      },
+      "v3": {
+        "mae": 124.16921354369501,
+        "rmse": 230.5100490534441,
+        "wape": 33.81853833388798
+      }
+    }
+  },
+  "midnight_metrics": {
+    "gate": {
+      "count": 13,
+      "v5": {
+        "mae": 89.6619141246962,
+        "rmse": 176.72353770110078,
+        "wape": 16.701506291521085
+      },
+      "mean7": {
+        "mae": 76.61831453154728,
+        "rmse": 152.12111410193836,
+        "wape": 14.271848584614569
+      }
+    },
+    "test": {
+      "count": 47,
+      "v5": {
+        "mae": 128.8206866721077,
+        "rmse": 235.73328001634084,
+        "wape": 35.19605473224457
+      },
+      "mean7": {
+        "mae": 123.6189091498543,
+        "rmse": 227.5362995218652,
+        "wape": 33.77483853546868
+      }
+    }
+  },
+  "gate": "FAIL",
+  "plan": {
+    "candidates": [
+      "mean7",
+      "normalized",
+      "normalized_solar"
+    ],
+    "params": {
+      "loss": "absolute_error",
+      "max_iter": 200,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 50,
+      "learning_rate": 0.05,
+      "l2_regularization": 1,
+      "early_stopping": false,
+      "random_state": 42
+    },
+    "selection": "Minimum early Validation WAPE only; winner frozen before Gate/Test",
+    "normalization": "Past168h 95th percentile, floor1 MWh; sample-weighted absolute loss",
+    "solar": "NOAA calendar geometry; assumed regional proxy 34.8N/126.8E, hourly midpoint, KST; not weather or exact plant location",
+    "gate": {
+      "absolute_cap": 40,
+      "relative_to_best_production_or_mean7": 0.95
+    },
+    "production_switched": false
+  },
+  "audit": {
+    "total_raw_rows": 166440,
+    "target_rows": 8760,
+    "missing_or_duplicate_hours": false,
+    "nonfinite_or_negative": false,
+    "observed_zero_rows": 915,
+    "raw_csv_sha256": "3f6f142ded3619a1b6d7d26b8bc8b17d3a9fdf720e68bc26a1d4861dc7e3015b",
+    "raw_rows_edited": 0,
+    "targets_smoothed_or_clipped": false,
+    "difficult_test_rows_removed": 0,
+    "night_values_preserved": true,
+    "ESS_source": "https://new.kpx.or.kr/boardDownload.es?bid=0045&list_no=71003&seq=2"
+  },
+  "limitations": [
+    "Existing Test inspected in prior experiments; independent future evaluation required",
+    "No forecast weather or measured capacity; history quantile is not installed capacity",
+    "No serving/retraining integration or promotion"
+  ]
+}

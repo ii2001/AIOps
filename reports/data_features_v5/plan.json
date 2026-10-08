@@ -1,0 +1,25 @@
+{
+  "candidates": [
+    "mean7",
+    "normalized",
+    "normalized_solar"
+  ],
+  "params": {
+    "loss": "absolute_error",
+    "max_iter": 200,
+    "max_leaf_nodes": 31,
+    "min_samples_leaf": 50,
+    "learning_rate": 0.05,
+    "l2_regularization": 1,
+    "early_stopping": false,
+    "random_state": 42
+  },
+  "selection": "Minimum early Validation WAPE only; winner frozen before Gate/Test",
+  "normalization": "Past168h 95th percentile, floor1 MWh; sample-weighted absolute loss",
+  "solar": "NOAA calendar geometry; assumed regional proxy 34.8N/126.8E, hourly midpoint, KST; not weather or exact plant location",
+  "gate": {
+    "absolute_cap": 40,
+    "relative_to_best_production_or_mean7": 0.95
+  },
+  "production_switched": false
+}

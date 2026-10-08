@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "raw_csv_unchanged": true,
+  "same_test_actuals": true,
+  "past_only_features": true,
+  "zero_history_finite": true,
+  "solar_season_sanity": true,
+  "saved_inference_parity": true,
+  "existing_files_preserved": true,
+  "production_switched": false,
+  "gate": "FAIL"
+}

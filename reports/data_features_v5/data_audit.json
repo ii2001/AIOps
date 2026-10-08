@@ -1,0 +1,13 @@
+{
+  "total_raw_rows": 166440,
+  "target_rows": 8760,
+  "missing_or_duplicate_hours": false,
+  "nonfinite_or_negative": false,
+  "observed_zero_rows": 915,
+  "raw_csv_sha256": "3f6f142ded3619a1b6d7d26b8bc8b17d3a9fdf720e68bc26a1d4861dc7e3015b",
+  "raw_rows_edited": 0,
+  "targets_smoothed_or_clipped": false,
+  "difficult_test_rows_removed": 0,
+  "night_values_preserved": true,
+  "ESS_source": "https://new.kpx.or.kr/boardDownload.es?bid=0045&list_no=71003&seq=2"
+}
