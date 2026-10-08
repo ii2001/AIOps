@@ -1,0 +1,45 @@
+{
+  "params": {
+    "categorical_features": "from_dtype",
+    "early_stopping": false,
+    "interaction_cst": null,
+    "l2_regularization": 1,
+    "learning_rate": 0.05,
+    "loss": "absolute_error",
+    "max_bins": 255,
+    "max_depth": null,
+    "max_features": 1.0,
+    "max_iter": 100,
+    "max_leaf_nodes": 15,
+    "min_samples_leaf": 50,
+    "monotonic_cst": null,
+    "n_iter_no_change": 10,
+    "quantile": null,
+    "random_state": 42,
+    "scoring": "loss",
+    "tol": 1e-07,
+    "validation_fraction": 0.1,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "metrics": {
+    "early_stopping_calibration": {
+      "mae": 185.27586622712482,
+      "rmse": 328.87519480501544,
+      "wape": 49.3328931974809
+    },
+    "gate": {
+      "mae": 98.46192563820404,
+      "rmse": 183.3507531914091,
+      "wape": 18.27624830360021
+    },
+    "test": {
+      "mae": 129.18434836568875,
+      "rmse": 235.18700492513088,
+      "wape": 35.18445283384193
+    }
+  },
+  "production_switched": false,
+  "features": "Known future calendar, past day/week/mean and seven-day same-hour std/min/max",
+  "selection": "One fixed benchmark; Train only, no random internal Validation, no Test-based tuning"
+}

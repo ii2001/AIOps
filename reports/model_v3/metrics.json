@@ -1,0 +1,154 @@
+{
+  "model_version": "baseline-v3-experimental",
+  "architecture": "history LSTM32 + known future calendar + past day/week/mean -> shared Dense32 -> residual added to seasonal mean",
+  "seed": 42,
+  "max_epochs": 50,
+  "epochs_completed": 9,
+  "best_epoch": 1,
+  "loss": "mae",
+  "segments": {
+    "train": {
+      "target_start": "2025-01-08T00:00:00+09:00",
+      "target_end": "2025-09-13T11:00:00+09:00",
+      "samples": 5941
+    },
+    "early_stopping_calibration": {
+      "target_start": "2025-09-20T12:00:00+09:00",
+      "target_end": "2025-10-24T05:00:00+09:00",
+      "samples": 787
+    },
+    "gate": {
+      "target_start": "2025-10-24T06:00:00+09:00",
+      "target_end": "2025-11-07T05:00:00+09:00",
+      "samples": 313
+    },
+    "test": {
+      "target_start": "2025-11-14T06:00:00+09:00",
+      "target_end": "2025-12-31T23:00:00+09:00",
+      "samples": 1123
+    }
+  },
+  "metrics": {
+    "early_stopping_calibration": {
+      "v3": {
+        "mae": 187.95406759908852,
+        "rmse": 319.65921878124647,
+        "wape": 50.04601048002252
+      },
+      "v2": {
+        "mae": 197.8002295260201,
+        "rmse": 319.04554586605883,
+        "wape": 52.66772082275525
+      },
+      "Previous Day Same Hour": {
+        "mae": 187.21740783520073,
+        "rmse": 345.0599187188268,
+        "wape": 49.84986211923058
+      },
+      "Previous Week Same Hour": {
+        "mae": 233.60258544145168,
+        "rmse": 418.6532091270831,
+        "wape": 62.200715251878606
+      },
+      "7-Day Same-Hour Mean": {
+        "mae": 186.7763084690209,
+        "rmse": 319.8318689906826,
+        "wape": 49.73241180924497
+      }
+    },
+    "gate": {
+      "v3": {
+        "mae": 80.14807319573117,
+        "rmse": 160.2654472294551,
+        "wape": 14.876878319064184
+      },
+      "v2": {
+        "mae": 205.5295898843926,
+        "rmse": 319.01443748589554,
+        "wape": 38.14987157844899
+      },
+      "Previous Day Same Hour": {
+        "mae": 110.8305504597708,
+        "rmse": 221.88372458318165,
+        "wape": 20.57208049404152
+      },
+      "Previous Week Same Hour": {
+        "mae": 159.40498578201178,
+        "rmse": 320.4988228704846,
+        "wape": 29.588341707726208
+      },
+      "7-Day Same-Hour Mean": {
+        "mae": 81.6324331530834,
+        "rmse": 161.31881700888547,
+        "wape": 15.152401380152526
+      }
+    },
+    "test": {
+      "v3": {
+        "mae": 124.16921354369501,
+        "rmse": 230.5100490534441,
+        "wape": 33.81853833388798
+      },
+      "v2": {
+        "mae": 157.36653039076117,
+        "rmse": 247.0586689987361,
+        "wape": 42.8601091092369
+      },
+      "Previous Day Same Hour": {
+        "mae": 140.2582627720494,
+        "rmse": 277.65169941910284,
+        "wape": 38.20052733548089
+      },
+      "Previous Week Same Hour": {
+        "mae": 138.0298381308441,
+        "rmse": 286.09411247943325,
+        "wape": 37.59359698614546
+      },
+      "7-Day Same-Hour Mean": {
+        "mae": 124.44054705582026,
+        "rmse": 228.43934153281722,
+        "wape": 33.89243831697716
+      }
+    }
+  },
+  "gate_plan": {
+    "cap_wape": 49.73241184089899,
+    "source": "7-day same-hour mean WAPE on early Validation calibration only; frozen before training/Test",
+    "gate_start": "2025-10-24T06:00:00+09:00",
+    "gate_end": "2025-11-07T05:00:00+09:00",
+    "require_lower_than_production_and_same_window_naive": true,
+    "business_accuracy_SLA": false
+  },
+  "gate": "PASS",
+  "history": {
+    "loss": [
+      0.07358144223690033,
+      0.07265350967645645,
+      0.072457455098629,
+      0.07206719368696213,
+      0.07173824310302734,
+      0.07161038368940353,
+      0.07122591137886047,
+      0.07072822004556656,
+      0.07033546268939972
+    ],
+    "val_loss": [
+      0.07944861054420471,
+      0.07969854772090912,
+      0.08025666326284409,
+      0.08095837384462357,
+      0.0815482810139656,
+      0.08053921163082123,
+      0.08019981533288956,
+      0.08045992255210876,
+      0.0807906985282898
+    ]
+  },
+  "production_switched": false,
+  "limitations": [
+    "single predetermined architecture; no Test-based hyperparameter search",
+    "Test already examined in prior experiments; new independent future period still needed",
+    "v2 comparator originally used full Validation for EarlyStopping; Gate is withheld only from v3 fitting/selection",
+    "multiple-input v3 requires serving/retraining integration before production deployment"
+  ]
+}

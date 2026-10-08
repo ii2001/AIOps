@@ -1,0 +1,8 @@
+{
+  "cap_wape": 49.73241184089899,
+  "source": "7-day same-hour mean WAPE on early Validation calibration only; frozen before training/Test",
+  "gate_start": "2025-10-24T06:00:00+09:00",
+  "gate_end": "2025-11-07T05:00:00+09:00",
+  "require_lower_than_production_and_same_window_naive": true,
+  "business_accuracy_SLA": false
+}
