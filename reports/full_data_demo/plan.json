@@ -1,0 +1,26 @@
+{
+  "purpose": "All-data training and in-sample presentation demo",
+  "trained_on_prior_validation_and_test": true,
+  "evaluation_is_independent": false,
+  "params": {
+    "loss": "absolute_error",
+    "max_iter": 500,
+    "max_leaf_nodes": 63,
+    "min_samples_leaf": 20,
+    "learning_rate": 0.05,
+    "l2_regularization": 1,
+    "early_stopping": false,
+    "random_state": 42
+  },
+  "gate": "NOT_EVALUATED_NO_HOLDOUT",
+  "production_switched": false,
+  "proposed_future_gate": {
+    "cap_wape": 40,
+    "minimum_relative_improvement": 0.05,
+    "comparators": [
+      "current Production",
+      "7-Day Same-Hour Mean"
+    ],
+    "requires_new_independent_targets": true
+  }
+}

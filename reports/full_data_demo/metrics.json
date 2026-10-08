@@ -1,0 +1,45 @@
+{
+  "purpose": "All-data training and in-sample presentation demo",
+  "trained_on_prior_validation_and_test": true,
+  "evaluation_is_independent": false,
+  "params": {
+    "loss": "absolute_error",
+    "max_iter": 500,
+    "max_leaf_nodes": 63,
+    "min_samples_leaf": 20,
+    "learning_rate": 0.05,
+    "l2_regularization": 1,
+    "early_stopping": false,
+    "random_state": 42
+  },
+  "gate": "NOT_EVALUATED_NO_HOLDOUT",
+  "production_switched": false,
+  "proposed_future_gate": {
+    "cap_wape": 40,
+    "minimum_relative_improvement": 0.05,
+    "comparators": [
+      "current Production",
+      "7-Day Same-Hour Mean"
+    ],
+    "requires_new_independent_targets": true
+  },
+  "model": "normalized histogram gradient boosting / full-data-demo",
+  "training_target_start": "2025-01-08T00:00:00+09:00",
+  "training_target_end": "2025-12-31T23:00:00+09:00",
+  "training_origins": 8569,
+  "metrics": {
+    "all_training_origins_in_sample": {
+      "mae": 48.95687468370348,
+      "rmse": 101.72255714660228,
+      "wape": 10.11671579309475
+    },
+    "former_test_origins_in_sample": {
+      "mae": 41.53884323246635,
+      "rmse": 81.96423648778057,
+      "wape": 11.31345622728121
+    }
+  },
+  "previous_v3_evaluation_wape": 33.81853833388798,
+  "metrics_label": "학습 데이터 재평가 오차 (기존 Test 포함 학습); 독립 운영 성능 아님",
+  "source_csv_sha256": "3f6f142ded3619a1b6d7d26b8bc8b17d3a9fdf720e68bc26a1d4861dc7e3015b"
+}

@@ -1,0 +1,12 @@
+{
+  "cap_wape": 15,
+  "minimum_relative_improvement": 0.05,
+  "comparators": [
+    "current Production",
+    "7-Day Same-Hour Mean"
+  ],
+  "requires_new_independent_targets": true,
+  "status": "NOT_EVALUATED_NO_HOLDOUT",
+  "scope": "presentation operating assumption; not a live deployment policy",
+  "supersedes_proposed_cap_wape": 40
+}

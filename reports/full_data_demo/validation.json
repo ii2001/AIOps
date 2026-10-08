@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "former_test_in_training": true,
+  "scores_recomputed": true,
+  "saved_model_inference_parity": true,
+  "in_sample_labels_explicit": true,
+  "original_data_models_preserved": true,
+  "authorized_training_policy_code_change": [
+    "scripts/train_full_data_demo.py"
+  ],
+  "current_proposed_gate_cap": 15,
+  "independent_gate": "NOT_EVALUATED_NO_HOLDOUT",
+  "production_switched": false
+}
